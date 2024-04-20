@@ -67,6 +67,9 @@ class Smiley extends Phaser.Scene {
     }
 
     update() {
+        if (Phaser.Input.Keyboard.JustDown(this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.M))) this.scene.add('mouseSmiley', MouseSmiley, true, { x: 400, y: 300 });
+
+
         let my = this.my;    // create an alias to this.my for readability
 
         // Since update is called multiple times/second, this.counter acts like
